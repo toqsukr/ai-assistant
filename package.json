@@ -5,14 +5,19 @@
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "eslint-plugin-erasable-syntax-only": "^0.3.1",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@langchain/core": "^0.3.72",
+    "@langchain/yandex": "^0.1.0",
     "axios": "^1.11.0",
     "dotenv": "^17.2.1",
+    "gigachat": "^0.0.16",
     "langchain": "^0.3.31",
     "langchain-gigachat": "^0.0.14",
+    "typescript-eslint": "^8.41.0",
     "uuid": "^11.1.0",
     "zod": "^3.25.76"
   }
