@@ -4,12 +4,11 @@ import type {
   BaseChatModelCallOptions,
 } from '@langchain/core/language_models/chat_models'
 import type { AIMessageChunk } from '@langchain/core/messages'
-import type { Runnable, RunnableConfig } from '@langchain/core/runnables'
-import type { ToolInterface } from '@langchain/core/tools'
+import type { Runnable, RunnableConfig, RunnableToolLike } from '@langchain/core/runnables'
+import type { DynamicTool, StructuredToolInterface } from '@langchain/core/tools'
 import { v4 as uuid4 } from 'uuid'
-import { z } from 'zod'
 
-export class LLMAgent<SchemaT extends z.ZodType<unknown, z.ZodTypeDef>> {
+export class LLMAgent {
   private readonly modelWithTools: Runnable<
     BaseLanguageModelInput,
     AIMessageChunk,
@@ -18,7 +17,7 @@ export class LLMAgent<SchemaT extends z.ZodType<unknown, z.ZodTypeDef>> {
 
   constructor(
     model: BaseChatModel,
-    private readonly tools: ToolInterface<SchemaT>[],
+    private readonly tools: (StructuredToolInterface | DynamicTool | RunnableToolLike)[],
     private readonly config: RunnableConfig = { configurable: { thread_id: uuid4() } }
   ) {
     if (!model.bindTools) throw new Error('This llm model does not support binding tools!')

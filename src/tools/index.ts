@@ -1,3 +1,4 @@
 import { calculatorTool } from './calculator'
+import { tavilyTool } from './tavily'
 
-export default [calculatorTool]
+export default [calculatorTool, tavilyTool]
