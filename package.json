@@ -5,6 +5,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "@types/node-telegram-bot-api": "^0.64.10",
     "eslint-plugin-erasable-syntax-only": "^0.3.1",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2"
@@ -19,6 +20,8 @@
     "gigachat": "^0.0.16",
     "langchain": "^0.3.31",
     "langchain-gigachat": "^0.0.14",
+    "node-telegram-bot-api": "^0.66.0",
+    "pino": "^9.9.0",
     "typescript-eslint": "^8.41.0",
     "uuid": "^11.1.0",
     "zod": "^3.25.76"

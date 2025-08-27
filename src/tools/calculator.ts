@@ -29,5 +29,6 @@ export const calculatorTool = tool(
     description:
       'Can perform mathematical operations. Supports only addition subtraction multiplication and division operations',
     schema: calculatorSchema,
+    verbose: true,
   }
 )
