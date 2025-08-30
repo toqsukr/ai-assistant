@@ -11,7 +11,6 @@ const calculatorSchema = z.object({
 
 export const calculatorTool = tool(
   async ({ operation, number1, number2 }) => {
-    // Functions must return strings
     if (operation === 'add') {
       return `${number1 + number2}`
     } else if (operation === 'subtract') {

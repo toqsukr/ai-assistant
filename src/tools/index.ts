@@ -1,4 +1,4 @@
 import { calculatorTool } from './calculator'
-import { tavilyTool } from './tavily'
+import { cryptoTool } from './crypto'
 
-export default [calculatorTool, tavilyTool]
+export default [calculatorTool, cryptoTool]
